@@ -5,4 +5,6 @@ const LandingPage = () =>
         <h1>Landing Page</h1>
     </div>
     
-export default LandingPage;    
+export default LandingPage;  
+
+// not protected.  Everyone lands here.

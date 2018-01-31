@@ -6,3 +6,5 @@ const PasswordForgetPage = () =>
     </div>
     
 export default PasswordForgetPage; 
+
+// not protected
