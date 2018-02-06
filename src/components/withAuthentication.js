@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { firebase } from '../firebase';
 
 const withAuthentication = (Component) => {
@@ -10,6 +11,14 @@ const withAuthentication = (Component) => {
                 authUser: null,
             };
             }
+
+        getChildContext() {
+            return {
+                authUser: this.state.authUser,
+            }
+        }
+            
+
         componentDidMount() {
             firebase.auth.onAuthStateChanged(authUser => {
                 authUser
@@ -25,6 +34,11 @@ const withAuthentication = (Component) => {
             );
         }
     }
+    WithAuthentication.childContextTypes = {
+        authUser: PropTypes.object,
+    }     
+
+
     return WithAuthentication;
 }
 
