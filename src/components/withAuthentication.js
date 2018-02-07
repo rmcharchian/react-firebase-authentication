@@ -15,7 +15,7 @@ const withAuthentication = (Component) => {
         getChildContext() {
             return {
                 authUser: this.state.authUser,
-            }
+            };
         }
             
 

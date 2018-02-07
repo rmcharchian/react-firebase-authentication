@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
-const Navigation = (props, { authUser}) =>
+const Navigation = (props, { authUser }) =>
     <div>
         { authUser
             ? <NavigationAuth />
