@@ -13,3 +13,5 @@ const authCondition = (authUser) => !!authUser;
 export default withAuthorization(authCondition)(HomePage); 
 
 // protected page
+
+// can also add this for admins and other authorized users.  See rwieruch bookmark under Protected Routes
