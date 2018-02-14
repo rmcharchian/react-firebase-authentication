@@ -32,7 +32,7 @@ class SignUpForm extends Component {
 
   onSubmit = (event) => {
     const {
-        // username,
+        username,
         email,
         passwordOne,
       } = this.state;
@@ -49,7 +49,6 @@ class SignUpForm extends Component {
             this.setState(() => ({ ...INITIAL_STATE}));
             history.push(routes.HOME);
           })
-
           .catch(error => {
             this.setState(byPropKey('error', error));
           }); 
